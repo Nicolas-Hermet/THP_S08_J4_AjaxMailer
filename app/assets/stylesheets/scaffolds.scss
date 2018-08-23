@@ -1,3 +1,4 @@
+/* 
 body {
   background-color: #fff;
   color: #333;
@@ -81,4 +82,42 @@ div {
 
 label {
   display: block;
+}
+*/
+
+body {
+  color: black;
+  font-family: futura, verdana;
+}
+
+.navbar {
+  font-family: futura, verdana;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  padding-top: 5vh;
+}
+
+.column1 {
+  flex: 25%;
+}
+
+.column2 {
+  flex: 75%;
+}
+
+ul {
+  list-style: none;
+
+}
+
+li {
+
+  padding: 10px;
+
+  width: 250px;
 }

@@ -1,56 +1,45 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
 
-  <h1>Emails</h1>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active"><a class="nav-link" href="#">Email</a></li>
+    </ul>
+  </nav>
 
+  <div class="row d-flex justify-content-around"">
+    <div class="col-sm">
+      <% @emails.each do |email| %>
+      <ul>
+      <% if email.read == true %> 
+        <li id="object_<%= email.id %>" class="read" ><%= link_to email.object, email_path(email), remote: true %></li>
+      <% else %>
+        <li id="object_<%= email.id %>" class="ur" ><%= link_to email.object, email_path(email), remote: true %></li>
+      <% end %>
+      </ul>
+      <% end %>
+    </div>
 
-  <div class="col-lg-6">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @emails.each do |email| %>
-          <tr>
-            <% if email.read == true %> 
-                <td id="object_<%= email.id %>" class="read" ><%= link_to email.object, email_path(email), remote: true %></td>
-                <% else %>
-                <td id="object_<%= email.id %>" class="ur" ><%= link_to email.object, email_path(email), remote: true %></td>
-                <% end %>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="col-lg-6">
-    <table class="table table-striped">
-      <tr>
-
-        <th>content</th>
-
-      </tr>
-    </table>
-
-    <% @emails.each do |email| %> 
-
+    <div class="col-sm">
+      <% @emails.each do |email| %> 
         <div id="mail_<%= email.id %>" class="emailcontent" style="display: none;" >
-          <div class="row" id="box">
-            <h1><%= email.object %></h1><br>
-            <p><%= email.body %></p>
-          
-            <%= link_to email, remote: true, method: :delete, class: 'delete_email' , data: { confirm: 'Are you sure?' } do %>
-              <button>Delete!</button>
-            <% end %>
-
-          </div>
+        <ul>
+          <li><b><%= email.object %></b></li>
+          <li><%= email.body %></li>
+        <%= link_to email, remote: true, method: :delete, class: 'delete_email' , data: { confirm: 'Are you sure?' } do %>
+        <li><button type="button" class="btn btn-danger">Delete</button></li>
+      <% end %>
+    </ul>
+        </div>
         </div>
       <% end %>
-        
-  </div>
-</div>
+    </div>
 
-<br>
+  </div>
+
+</body>
+</html>
