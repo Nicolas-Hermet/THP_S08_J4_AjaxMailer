@@ -1,5 +1,5 @@
 # Ajax Tes Mails
-https://nico-h-startup-foodtech.herokuapp.com/
+https://ajax-tes-mails.herokuapp.com/
 
 Made with :heart: in the brand new team !
 - Jérémie Edery
