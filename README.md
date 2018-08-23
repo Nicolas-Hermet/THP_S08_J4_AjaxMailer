@@ -1,26 +1,34 @@
-# README
+# Ajax Tes Mails
+https://nico-h-startup-foodtech.herokuapp.com/
 
-https://ajax-tes-mails.herokuapp.com/
+Made with :heart: in the brand new team !
+- Jérémie Edery
+- Ridwan Baboolall
+- Louis Delestre
+- Nico Hermet
+- Jérémie de Gueltzl
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## L'objectif :
+Utiliser Ajax pour simuler un affichage et suppression de mails
 
-* Ruby version
 
-* System dependencies
+## versions utilisées
+Ruby : 2.5.1
+Rails : 5.2.1
 
-* Configuration
 
-* Database creation
+****
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation en local : 
+Après un clone faite : 
+```
+$> bundle install
+$> rails db:create
+$> rails s
+```
+Puis lancer localhost:3000 dans votre navigateur.
 
-* Deployment instructions
-
-* ...
+Enjoy :wink:
