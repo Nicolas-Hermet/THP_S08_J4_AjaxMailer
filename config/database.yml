@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: THP_S8_Jeudi_ajax_production
-  username: THP_S8_Jeudi_ajax
-  password: <%= ENV['THP_S8_JEUDI_AJAX_DATABASE_PASSWORD'] %>
+  database: THP_S8_Jeudi_ajax_development
